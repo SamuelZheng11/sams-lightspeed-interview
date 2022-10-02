@@ -1,6 +1,6 @@
 export function GetNewOrder() {
     return new Promise((resolve, reject) => {
-        fetch('https://ls-ios-products.herokuapp.com/')
+        fetch(process.env.REACT_APP_BACKEND_URI ?? '')
             .then((results) => {
                 resolve(results.json());
             })
