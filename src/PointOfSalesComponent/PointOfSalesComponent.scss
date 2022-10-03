@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+.point-of-sales {
+    display: flex;
+    flex-direction: column;
+    min-width: 325px;
+    width: 35vw;
+
+    background-color: white;
+    border-radius: 5px;
+
+    &-list-container {
+        display: flex;
+        flex-direction: column;
+        padding: $spacing-small;
+        gap: $spacing-medium;
+    }
+
+    &-list-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-text {
+            height: fit-content;
+            transform: translateY(50%);
+            text-align: start;
+            width: fit-content;
+        }
+    }
+
+    .order-input-container {
+        user-select: none;
+    }
+
+    .order-name-text {
+        flex-grow: 2;
+        width: 40%;
+    }
+
+    .order-price-text {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 25%;
+    }
+
+    // Class in here to prevent access from outside of pos container class
+    &-total-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $spacing-small;
+    }
+
+    &-order-button-text {
+        color: var(--colors-white) !important;
+    }
+}

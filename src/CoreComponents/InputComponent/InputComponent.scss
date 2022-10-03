@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.chip-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100px;
+    padding: $spacing-xxx-small;
+    background: var(--colors-gray100);
+    border-radius: 50px;
+
+    &-value {
+        &-container {
+            flex-grow: 1;
+            text-align: center;
+            background-color: white;
+            padding: $spacing-xx-small
+        }
+
+        &-text {
+            transform: translateY(20%);
+        }
+    }
+
+    .input-button {
+        :hover {
+            cursor: pointer;
+        }
+
+        user-select: none;
+    }
+
+    .left-button {
+        margin-right: $spacing-small;
+        margin-left: $spacing-x-small;
+        border-left: 100%;
+    }
+
+    .right-button {
+        margin-left: $spacing-small;
+        margin-right: $spacing-x-small;
+        border-right: 100%;
+    }
+}

@@ -2,8 +2,9 @@ import App from './App';
 import { screen, render } from '@testing-library/react';
 
 describe('App', () => {
-    it('should render', () => {
+    it('should render app', () => {
         render(<App />);
-        expect(screen.getByText('Hello Lightspeed')).toBeInTheDocument();
+        const app = screen.getByTestId('app');
+        expect(app).toBeInTheDocument();
     });
 });

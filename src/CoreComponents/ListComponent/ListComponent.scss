@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    gap: $spacing-medium;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    text-align: center;
+    gap: $spacing-small;
+
+    .loading-spinner {
+        height: 24px;
+        width: 24px;
+        animation: 1.5s linear infinite loadingSpinner;
+        background-image: url("./assets/hourglass_bottom_black_24dp.svg");
+    }
+}
+
+@keyframes loadingSpinner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
